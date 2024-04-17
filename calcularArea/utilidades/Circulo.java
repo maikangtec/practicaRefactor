@@ -1,6 +1,14 @@
 package utilidades;
 
 public class Circulo {
+	public double getRad() {
+		return rad;
+	}
+
+	public void setRad(double rad) {
+		this.rad = rad;
+	}
+
 	private double rad;
 
 	public Circulo(double radio) {
