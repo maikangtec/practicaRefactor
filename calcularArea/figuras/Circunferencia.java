@@ -1,20 +1,42 @@
 package figuras;
 
+/**
+ * Clase Circunferencia que calcula los
+ * parámetros de una figura circulo
+ */
+
 public class Circunferencia {
 	private double radio;
 	private String color;
+
+/**
+ * @param radio que guarda el radio del circulo
+ * @param color que guarda el color de la figura
+ */
 
 	public Circunferencia(double radio) {
 		this.radio = radio;
 	}
 
+	/**
+	 * @return devuelve el radio del circulo
+	 */
+
 	public double getRad() {
 		return radio;
 	}
 
+	/**
+	 * Setter para el radio del circulo
+	 */
+
 	public void setRad(double rad) {
 		this.radio = rad;
 	}
+
+	/**
+	 * Muestra por pantalla los datos del circulo
+	 */
 
 	public void imprimir() {
 		color = "rojo";
@@ -23,6 +45,11 @@ public class Circunferencia {
 		double area = 2 * 3.1416 * radio * radio;
 		System.out.println(area);
 	}
+
+	/**
+	 * @return devuelve un boolean al comparar dos
+	 * círculos
+	 */
 
 	public boolean esIgual(Circunferencia otro, boolean considerarDecimales) {
 		double radio1 = this.radio;
