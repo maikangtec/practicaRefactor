@@ -22,14 +22,19 @@ public class Circunferencia {
 		double d = 2 * radio;
 		System.out.println("Diametro: " + d);
 		System.out.println("Color: " + color);
-		double area = 2 * PI * radio * radio;
+		double area = calcularArea();
 		System.out.println(area);
 	}
 
-	public boolean esIgual(Circunferencia otro, boolean conDecimales) {
+	private double calcularArea() {
+		double area = 2 * PI * radio * radio;
+		return area;
+	}
+
+	public boolean esIgual(Circunferencia otro, boolean considerarDecimales) {
 		double radio1 = this.radio;
 		double radio2 = otro.getRad();
-		if (conDecimales) {
+		if (considerarDecimales) {
 			if (radio1 == radio2)
 				return true;
 			else
